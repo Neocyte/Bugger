@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:background="@drawable/grass_background">
+
+    <TextView
+        android:id="@+id/game_text"
+        android:text="@string/splash_title"
+        android:background="@drawable/splash_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:textSize="70sp"
+        android:paddingLeft="@dimen/textview_horiz_padding"
+        android:paddingRight="@dimen/textview_horiz_padding"
+        android:paddingTop="@dimen/textview_vert_padding"
+        android:paddingBottom="@dimen/textview_vert_padding"
+        android:textColor="@color/textColor"
+        android:gravity="center_horizontal"
+        android:fontFamily="@font/arcade_font"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/splash_image">
+    </TextView>
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/splash_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"
+        android:layout_gravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <Button
+        android:id="@+id/start_button"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:background="#9C1F29"
+        android:text="@string/start_button_text"
+        android:textSize="@dimen/button_textsize"
+        android:textColor="@color/textColor"
+        android:fontFamily="@font/arcade_font"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/splash_image"
+     />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

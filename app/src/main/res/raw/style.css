@@ -1,0 +1,256 @@
+/** style.css
+ * This file contains all of the styles used in the WebView that is contained in the main activity
+ */
+/* ----------------------------------GENERAL--------------------------------- */
+
+@font-face { /* Source: http://www.1001fonts.com/no-continue-font.html */
+  font-family: arcadeFont;
+  src: url("../font/arcade_font.ttf");
+}
+
+body {
+  font-family: arcadeFont, "Comic Sans MS", cursive, sans-serif, Georgia, serif;
+  text-align: center;
+  background-image: url('./grass_background.jpg'); /* Source: http://hddesktopwallpapers.in/grass-wallpaper-full-hd/ */
+}
+
+/* ----------------------------------SCORE----------------------------------- */
+
+.score {
+  padding-top: 3%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+
+.score-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  color: #000;
+  box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+  margin: 0 36.75%;
+  border-radius: 5px;
+  font-size: 30px;
+  font-weight: bold;
+  width: 40%;
+  height: 50px;
+}
+
+.hearts {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  list-style: none;
+  width: 165px;
+  margin: 0;
+}
+
+.heart1,
+.heart2,
+.heart3 {
+  width: 27.5px;
+  height: 46.55px;
+  padding: 13px;
+  animation: beat .375s infinite alternate;
+  transform-origin: center;
+}
+
+.lose {
+    visibility: hidden;
+}
+
+.score-text {
+  width: 100%;
+  padding-left: 15%;
+}
+
+.score-number {
+  width: 100%;
+  padding-right: 20%;
+
+}
+
+@keyframes beat { /* Source: https://codepen.io/fivera/pen/rzepn */
+	to { transform: scale(1.4); }
+}
+
+/* --------------------------------POPUP------------------------------------- */
+
+.gameover-background {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: fixed;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+
+.gameover-popup {
+  width: 20%;
+  padding-bottom: 50px;
+  text-align: center;
+  display: none; /* Hidden by default; changes to flex during GAME OVER */
+  position: fixed;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+.gameover-heading {
+  font-size: 75px;
+}
+
+.gameover-button {
+  font-family: arcadeFont, "Comic Sans MS", cursive, sans-serif, Georgia, serif;
+  font-size: 20px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  color: #fff;
+  background-color: #ff0000;
+}
+
+/* -----------------------------MEDIA QUERIES-------------------------------- */
+
+/*SMALL DEVICES*/
+@media screen and (max-width: 600px) {
+  body {
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+  }
+
+  .score-container {
+    margin: 10% 0 -2.5% 0;
+    height: 10vh;
+    width: 100%;
+  }
+
+  .hearts {
+    width: 100%;
+    padding-left: 5%;
+  }
+
+  .heart1,
+  .heart2,
+  .heart3 {
+    width: 25px;
+    height: 45px;
+    padding: 0 10px;
+  }
+
+  .score-text {
+    width: 100%;
+    padding-left: 10%;
+    font-size: 30px;
+  }
+
+  .score-number {
+    width: 100%;
+    padding-right: 15%;
+    font-size: 30px;
+  }
+
+  canvas {
+    width: 100%;
+    height: 100%;
+  }
+
+  .gameover-popup {
+    width: 90%;
+  }
+
+  .gameover-button {
+    font-size: 25px;
+    padding: 10px 15px;
+  }
+}
+
+/*MEDIUM DEVICES*/
+@media screen and (min-width: 601px) and (max-width: 1050px) {
+  body {
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+  }
+
+  .score-container {
+    margin: 0 0 -5% 0;
+    height: 10vh;
+    width: 100%;
+  }
+
+  .hearts {
+    width: 100%;
+    padding-left: 5%;
+  }
+
+  .heart1,
+  .heart2,
+  .heart3 {
+    width: 60px;
+    height: 100px;
+    padding: 0 20px;
+  }
+
+  .score-text {
+    width: 100%;
+    padding-left: 10%;
+    font-size: 70px;
+  }
+
+  .score-number {
+    width: 100%;
+    padding-right: 10%;
+    font-size: 70px;
+  }
+
+  canvas {
+    width: 100%;
+    height: 100%;
+  }
+
+  .gameover-popup {
+    width: 90%;
+  }
+
+  .gameover-heading {
+    font-size: 100px;
+  }
+
+  .gameover-button {
+    font-size: 50px;
+    padding: 10px 15px;
+  }
+}
+
+/*LARGE DEVICES*/
+@media screen and (min-width: 1051px) and (max-width: 1800px) {
+  .score-container {
+    margin: 0 35%;
+  }
+
+@media screen and (min-width: 1051px) and (max-width: 1500px) {
+  .score-container {
+    margin: 0 32.25%;
+  }
+
+@media screen and (min-width: 1051px) and (max-width: 1300px) {
+  .score-container {
+    margin: 0 30%;
+  }
+}

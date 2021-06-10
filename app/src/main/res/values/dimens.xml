@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="button_textsize">50sp</dimen>
+    <dimen name="button_width">232dp</dimen>
+    <dimen name="button_height">89dp</dimen>
+    <dimen name="textview_width">400dp</dimen>
+    <dimen name="textview_horiz_padding">20dp</dimen>
+    <dimen name="textview_vert_padding">10dp</dimen>
+</resources>
